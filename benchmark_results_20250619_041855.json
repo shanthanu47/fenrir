@@ -1,0 +1,253 @@
+{
+  "base_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "``` git checkout -b <branch_name> ```  Example Input: Input:    Create a new git branch, name it \"feature/new-branch\" and switch   to it. Output: git commit -m \"Feature branch created successfully\" ```",
+      "commands": [
+        "``` git checkout -b <branch_name> ```  Example Input: Input:    Create a new git branch",
+        "name it \"feature/new-branch\" and switch   to it. Output: git commit -m \"Feature branch created successfully\" ```"
+      ],
+      "bleu_score": 0.030904914794178312,
+      "rouge_score": 0.2857142857142857,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "-  `mkdir report_dir`  (Create a directory named \"report_dir\") -   `cd report_ dir` (Change directory to the 'report_ dir' directory) - `find . -maxdepth 1 -name \"*.txt\" -print0` (Find all text files in the current directory and print their names) ```python def compress_folder(folder_path):     with open(\"report_tar.txt\", \"w\") as f:         f.write(\"This is a compressed report file\\n\")         pass ``` ```bash",
+      "commands": [
+        "-  `mkdir report_dir`  (Create a directory named \"report_dir\") -   `cd report_ dir` (Change directory to the 'report_ dir' directory) - `find . -maxdepth 1 -name \"*.txt\" -print0` (Find all text files in the current directory and print their names) ```python def compress_folder(folder_path):     with open(\"report_tar.txt\"",
+        "\"w\") as f:         f.write(\"This is a compressed report file\\n\")         pass ``` ```bash"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.08823529411764706,
+      "quality_score": 1
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "- `find` - `-type f` ```python import os import sys import glob from pathlib import Path  Path(__file__) ``` The command above is not suitable for recursive listing of files.  Here's a more appropriate approach: 1.  Recursively list all files in current directory and subdirectories. 2.  List the file names with full path 3.  Print the filename 4.  The command below will work but it only lists files directly. 5.  Using `os.walk` to recursively find all files and directories. 6.",
+      "commands": [
+        "- `find` - `-type f` ```python import os import sys import glob from pathlib import Path  Path(__file__) ``` The command above is not suitable for recursive listing of files.  Here's a more appropriate approach: 1.  Recursively list all files in current directory and subdirectories. 2.  List the file names with full path 3.  Print the filename 4.  The command below will work but it only lists files directly. 5.  Using `os.walk` to recursively find all files and directories. 6."
+      ],
+      "bleu_score": 0.0022947928979879166,
+      "rouge_score": 0.07142857142857144,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "- python3 -m venv .venv - source .venv/bin/activate - pip install requests ``` Output: ```  ```bash venv, source . ```",
+      "commands": [
+        "- python3 -m venv .venv - source .venv/bin/activate - pip install requests ``` Output: ```  ```bash venv",
+        "source . ```"
+      ],
+      "bleu_score": 0.0627251733901403,
+      "rouge_score": 0.64,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "- `grep` - Search for a pattern in a file - `-v` - Invert the match (select all that are not) - `--line-number` - Show the current line number -  `head` - Display the first n lines of input -   `tail` - Displays the last n lines.  Here is the example input: input.txt ``` This is a test file. Line 1 Line2 Line3 Line4 Line5 Line6 Line7 Line8 Line9 Line10 ```  Output:",
+      "commands": [
+        "- `grep` - Search for a pattern in a file - `-v` - Invert the match (select all that are not) - `--line-number` - Show the current line number -  `head` - Display the first n lines of input -   `tail` - Displays the last n lines.  Here is the example input: input.txt ``` This is a test file. Line 1 Line2 Line3 Line4 Line5 Line6 Line7 Line8 Line9 Line10 ```  Output:"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.08955223880597016,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "``` git init virtualenv virtualenv pip install -r requirements.text ```  Now, run all these commands together. ```bash , ```python /path/to/your/script.py ```",
+      "commands": [
+        "``` git init virtualenv virtualenv pip install -r requirements.text ```  Now",
+        "run all these commands together. ```bash",
+        "```python /path/to/your/script.py ```"
+      ],
+      "bleu_score": 0.0599303148053787,
+      "rouge_score": 0.18604651162790697,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "```bash ps, top, awk ```  Final Answer: `/path/to/logfile.txt` ```python import subprocess import time import logging  def find_and_log_high_cpu_processes(threshold=80):     logging.basicConfig(file='process_log.txt')     processes = []     for process in subprocess.check_output(['ps', '-u', 'user'], universal_newlines=True):         try:             # Get the CPU usage percentage             cpu_usage = 100 - sum([int(",
+      "commands": [
+        "```bash ps",
+        "top",
+        "awk ```  Final Answer: `/path/to/logfile.txt` ```python import subprocess import time import logging  def find_and_log_high_cpu_processes(threshold=80):     logging.basicConfig(file='process_log.txt')     processes = []     for process in subprocess.check_output(['ps'",
+        "'-u'",
+        "'user']",
+        "universal_newlines=True):         try:             # Get the CPU usage percentage             cpu_usage = 100 - sum([int("
+      ],
+      "bleu_score": 0.004620856909230222,
+      "rouge_score": 0.15217391304347827,
+      "quality_score": 1
+    }
+  ],
+  "finetuned_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "git branch <branch_name> -t <commit_message> git checkout <branch-name> ```bash git fetch --all git Checkout -b <branchname> --quiet git push origin <branch name> cd <branchName> touch .git/index git init --bare git add <file1> <file2> ... git commit -m \"Branch name\" git remote add <remote_name>=<remote_url>  git branch <new_branch_prefix> -m <commit-message> -r git clone <remote url>",
+      "commands": [
+        "git branch <branch_name> -t <commit_message> git checkout <branch-name> ```bash git fetch --all git Checkout -b <branchname> --quiet git push origin <branch name> cd <branchName> touch .git/index git init --bare git add <file1> <file2> ... git commit -m \"Branch name\" git remote add <remote_name>=<remote_url>  git branch <new_branch_prefix> -m <commit-message> -r git clone <remote url>"
+      ],
+      "bleu_score": 0.008083053722455262,
+      "rouge_score": 0.1492537313432836,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "- -h: human readable version of file name, use only the last 3 characters for directory names. - --size: show the size of files in bytes, use the largest value. --exclude: exclude files with the specified pattern -x: extract files as named binary mode. gzip, tar, gzip, -h, --size, --exclude, x",
+      "commands": [
+        "- -h: human readable version of file name",
+        "use only the last 3 characters for directory names. - --size: show the size of files in bytes",
+        "use the largest value. --exclude: exclude files with the specified pattern -x: extract files as named binary mode. gzip",
+        "tar",
+        "gzip",
+        "-h",
+        "--size",
+        "--exclude",
+        "x"
+      ],
+      "bleu_score": 0.003593400513595791,
+      "rouge_score": 0.03636363636363636,
+      "quality_score": 1
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "- ls -R *.py - find . -name \"*.py\" - python -c \"import sys; print(sys.path)\" - grep -v \"python\" ```python import os import sys import re import wordlists import glob import subprocess from pathlib import Path # You can use a list of python files to search for. # For example, ['file1.py', 'file2.py'] files = [\"file1\", \"file2\"] for file in files:     os.walk(\".\") + \"/\"     if any(f",
+      "commands": [
+        "- ls -R *.py - find . -name \"*.py\" - python -c \"import sys; print(sys.path)\" - grep -v \"python\" ```python import os import sys import re import wordlists import glob import subprocess from pathlib import Path # You can use a list of python files to search for. # For example",
+        "['file1.py'",
+        "'file2.py'] files = [\"file1\"",
+        "\"file2\"] for file in files:     os.walk(\".\") + \"/\"     if any(f"
+      ],
+      "bleu_score": 0.013647193793775492,
+      "rouge_score": 0.11940298507462686,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "1.  Create a virtualenv module, make sure to activate it. 2.  Install requests library. 3.  List the packages installed. 4.  Unset all package requirements. 5.  Print the current python interpreter path. 6.  Set the Python interpreter to python3. Use the pyenv install -m requests command. 7.  Use pip install requests to install the requested library.",
+      "commands": [
+        "1.  Create a virtualenv module",
+        "make sure to activate it. 2.  Install requests library. 3.  List the packages installed. 4.  Unset all package requirements. 5.  Print the current python interpreter path. 6.  Set the Python interpreter to python3. Use the pyenv install -m requests command. 7.  Use pip install requests to install the requested library."
+      ],
+      "bleu_score": 0.018695672182779195,
+      "rouge_score": 0.15384615384615385,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "1.  Use grep to find all lines containing \"error\" or \"warning\". 2.  Pipe the output to grep to extract the matching lines. 3.  Extract the first 10 lines from the output.greped. 4. Use awk to filter out lines that do not contain \"error\", and then pipe the result to grep -v. 5. Finally, use grep -c. 6. Use grep to search for \"error\". 7. Use sed with -i command to replace the existing content. 8. Use gawk to replace error lines with error_replace",
+      "commands": [
+        "1.  Use grep to find all lines containing \"error\" or \"warning\". 2.  Pipe the output to grep to extract the matching lines. 3.  Extract the first 10 lines from the output.greped. 4. Use awk to filter out lines that do not contain \"error\"",
+        "and then pipe the result to grep -v. 5. Finally",
+        "use grep -c. 6. Use grep to search for \"error\". 7. Use sed with -i command to replace the existing content. 8. Use gawk to replace error lines with error_replace"
+      ],
+      "bleu_score": 0.0021821432764033825,
+      "rouge_score": 0.044444444444444446,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "- python3 -m venv .venv , pip install -U requests - git init --echo - add README.md - commit -m \"Initial commit\" - push github.com/your_username/yourproject ```python import sys print(\"Hello, world!\") ``` ```",
+      "commands": [
+        "- python3 -m venv .venv",
+        "pip install -U requests - git init --echo - add README.md - commit -m \"Initial commit\" - push github.com/your_username/yourproject ```python import sys print(\"Hello",
+        "world!\") ``` ```"
+      ],
+      "bleu_score": 0.026276400987738754,
+      "rouge_score": 0.47058823529411764,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "Use ls -l, find, tee, grep, awk, mail merge, kill, man. Use -z flag with find to filter for processes with PID = 1. \"\"\" #include <stdio.h> #define _GNU_SOURCE #endif  _execv(\"ps\", NULL) __FILE__, __LINE___, ps_cmd if (ps_cmd == \"<number>\") {   int pid = 0;   char *args[] = { \"-p\", \"1\" };   if (find(args, NULL, PS_MAX_ARGUMENTS",
+      "commands": [
+        "Use ls -l",
+        "find",
+        "tee",
+        "grep",
+        "awk",
+        "mail merge",
+        "kill",
+        "man. Use -z flag with find to filter for processes with PID = 1. \"\"\" #include <stdio.h> #define _GNU_SOURCE #endif  _execv(\"ps\"",
+        "NULL) __FILE__",
+        "__LINE___"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.056338028169014086,
+      "quality_score": 1
+    }
+  ],
+  "comparison": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "base_better": 2.3166192005084643,
+      "finetuned_better": 2.157336785065739,
+      "improvement": {
+        "bleu": -0.02282186107172305,
+        "rouge": -0.1364605543710021,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "base_better": 1.088235294117647,
+      "finetuned_better": 1.0399570368772322,
+      "improvement": {
+        "bleu": 0.003593400513595791,
+        "rouge": -0.0518716577540107,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "base_better": 1.0737233643265593,
+      "finetuned_better": 1.1330501788684024,
+      "improvement": {
+        "bleu": 0.011352400895787575,
+        "rouge": 0.047974413646055425,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "base_better": 2.7027251733901405,
+      "finetuned_better": 2.172541826028933,
+      "improvement": {
+        "bleu": -0.04402950120736111,
+        "rouge": -0.48615384615384616,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "base_better": 2.08955223880597,
+      "finetuned_better": 1.0466265877208478,
+      "improvement": {
+        "bleu": 0.0021821432764033825,
+        "rouge": -0.04510779436152571,
+        "quality": -1
+      }
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "base_better": 1.2459768264332856,
+      "finetuned_better": 2.4968646362818565,
+      "improvement": {
+        "bleu": -0.03365391381763995,
+        "rouge": 0.28454172366621067,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "base_better": 1.1567947699527086,
+      "finetuned_better": 1.056338028169014,
+      "improvement": {
+        "bleu": -0.004620856909230222,
+        "rouge": -0.09583588487446418,
+        "quality": 0
+      }
+    }
+  ]
+}

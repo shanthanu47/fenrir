@@ -1,0 +1,238 @@
+{
+  "base_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "git branch new-branch, git checkout new-branch",
+      "commands": [
+        "git branch new-branch",
+        "git checkout new-branch"
+      ],
+      "bleu_score": 0.09554427922043669,
+      "rouge_score": 0.6153846153846154,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "gzip -r reports, tar cf reports.tar reports/",
+      "commands": [
+        "gzip -r reports",
+        "tar cf reports.tar reports/"
+      ],
+      "bleu_score": 0.039281465090051315,
+      "rouge_score": 0.5714285714285715,
+      "quality_score": 1
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "ls -la | grep .py, find . -type f | grep python",
+      "commands": [
+        "ls -la | grep .py",
+        "find . -type f | grep python"
+      ],
+      "bleu_score": 0.05094110796339642,
+      "rouge_score": 0.42857142857142855,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "virtualenv venv, source venv/bin/activate, pip install requests",
+      "commands": [
+        "virtualenv venv",
+        "source venv/bin/activate",
+        "pip install requests"
+      ],
+      "bleu_score": 0.15228621982435664,
+      "rouge_score": 0.631578947368421,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "cat output.log | head -10",
+      "commands": [
+        "cat output.log | head -10"
+      ],
+      "bleu_score": 0.06389431042462725,
+      "rouge_score": 0.4000000000000001,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "virtualenv env, source env/bin/activate, pip install -r requirements.txt, git init, git add -A, git commit -m 'first commit'",
+      "commands": [
+        "virtualenv env",
+        "source env/bin/activate",
+        "pip install -r requirements.txt",
+        "git init",
+        "git add -A",
+        "git commit -m 'first commit'"
+      ],
+      "bleu_score": 0.45057004116894217,
+      "rouge_score": 0.6666666666666666,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "ps aux | awk '$3 > 80', echo 'high cpu processes' > log.txt, mail -s 'alert' admin@company.com < log.txt",
+      "commands": [
+        "ps aux | awk '$3 > 80'",
+        "echo 'high cpu processes' > log.txt",
+        "mail -s 'alert' admin@company.com < log.txt"
+      ],
+      "bleu_score": 0.009307235968914158,
+      "rouge_score": 0.32727272727272727,
+      "quality_score": 1
+    }
+  ],
+  "finetuned_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "git checkout -b new-branch",
+      "commands": [
+        "git checkout -b new-branch"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "tar -czf reports.tar.gz reports/",
+      "commands": [
+        "tar -czf reports.tar.gz reports/"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "find . -name '*.py' -type f",
+      "commands": [
+        "find . -name '*.py' -type f"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "python -m venv venv, venv\\Scripts\\activate, pip install requests",
+      "commands": [
+        "python -m venv venv",
+        "venv\\Scripts\\activate",
+        "pip install requests"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "head -n 10 output.log",
+      "commands": [
+        "head -n 10 output.log"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "python -m venv venv, venv\\Scripts\\activate, pip install -r requirements.txt, git init, git add ., git commit -m 'Initial commit'",
+      "commands": [
+        "python -m venv venv",
+        "venv\\Scripts\\activate",
+        "pip install -r requirements.txt",
+        "git init",
+        "git add .",
+        "git commit -m 'Initial commit'"
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "powershell \"Get-Process | Where-Object {$_.CPU -gt 80} | Out-File -FilePath high_cpu_processes.log\", powershell \"Send-MailMessage -To admin@company.com -Subject 'High CPU Alert' -Body 'Check high_cpu_processes.log' -SmtpServer smtp.company.com\"",
+      "commands": [
+        "powershell \"Get-Process | Where-Object {$_.CPU -gt 80} | Out-File -FilePath high_cpu_processes.log\"",
+        "powershell \"Send-MailMessage -To admin@company.com -Subject 'High CPU Alert' -Body 'Check high_cpu_processes.log' -SmtpServer smtp.company.com\""
+      ],
+      "bleu_score": 1.0,
+      "rouge_score": 1.0,
+      "quality_score": 2
+    }
+  ],
+  "comparison": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "base_better": 2.7109288946050523,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.9044557207795633,
+        "rouge": 0.3846153846153846,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "base_better": 1.6107100365186229,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.9607185349099487,
+        "rouge": 0.4285714285714285,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "base_better": 1.479512536534825,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.9490588920366035,
+        "rouge": 0.5714285714285714,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "base_better": 1.7838651671927777,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.8477137801756434,
+        "rouge": 0.368421052631579,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "base_better": 1.4638943104246274,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.9361056895753728,
+        "rouge": 0.5999999999999999,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "base_better": 3.117236707835609,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.5494299588310578,
+        "rouge": 0.33333333333333337,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "base_better": 1.3365799632416415,
+      "finetuned_better": 4.0,
+      "improvement": {
+        "bleu": 0.9906927640310859,
+        "rouge": 0.6727272727272727,
+        "quality": 1
+      }
+    }
+  ]
+}

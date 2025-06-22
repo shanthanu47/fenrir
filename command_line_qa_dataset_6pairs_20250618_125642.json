@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "total_qa_pairs": 6,
+    "target_count": 180,
+    "generation_date": "2025-06-18T12:56:42.683718",
+    "topics_covered": [
+      "bash",
+      "file_ops",
+      "git",
+      "python_env"
+    ],
+    "categories": [
+      "shell_scripting",
+      "file_operations",
+      "version_control"
+    ],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate"
+    ],
+    "status": "partial"
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "question": "\\nIs there a (Unix) shell script to format JSON in human-readable form?\\n\\nBasically, I want it to transform the following:\\n\\n\\n{ \"foo\": \"lorem\", \"bar\": \"ipsum\" }\\n\\n\\n... into something like this:\\n\\n\\n{\\n \"foo\": \"lorem\",\\n \"bar\": \"ipsum\"\\n}\\n\\n",
+      "answer": "\\nWith Python 2.6+ or 3 you can use the [json.tool](https://docs.python.org/3/library/json.html#module-json.tool) module:\\n\\n\\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\n\\n\\nor, if the JSON is in a file, you can do:\\n\\n\\npython -m json.tool my_json.json\\n\\n\\nif the JSON is from an internet source such as an API, you can use\\n\\n\\ncurl http://my_url/ | python -m json.tool\\n\\n\\nFor convenience in all of these cases you can make an alias:\\n\\n\\nalias prettyjson=\\'python -m json.tool\\'\\n\\n\\n---\\n\\nFor even more convenience with a bit more typing to get it ready:\\n\\n\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\n\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\n\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n",
+      "commands": [
+        "curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n \\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\npython -m json.tool my_json.json\\ncurl http://my_url/ | python -m json.tool\\nalias prettyjson=\\'python -m json.tool\\'\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n",
+        "Python 2.6+ or 3 you can use the [json.tool](https://docs.python.org/3/library/json.html#module-json.tool) module:\\n\\n\\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\n\\n\\nor, if the JSON is in a file, you can do:\\n\\n\\npython -m json.tool my_json.json\\n\\n\\nif the JSON is from an internet source such as an API, you can use\\n\\n\\ncurl http://my_url/ | python -m json.tool\\n\\n\\nFor convenience in all of these cases you can make an alias:\\n\\n\\nalias prettyjson=\\'python -m json.tool\\'\\n\\n\\n---\\n\\nFor even more convenience with a bit more typing to get it ready:\\n\\n\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\n\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\n\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n \\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\npython -m json.tool my_json.json\\ncurl http://my_url/ | python -m json.tool\\nalias prettyjson=\\'python -m json.tool\\'\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n"
+      ],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_query": "stackoverflow.com command line questions",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T12:43:42.727128",
+      "tags": [
+        "curl",
+        "bash",
+        "shell",
+        "sort",
+        "python"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "[Full question text here, preserve original formatting and context] Even after reading this question: [git-push-current-branch](https://stackoverflow.com/questions/948354/git-push-current-branch), I am still having difficulty figuring out how I should write my `git push` command. As mentioned in the question link, it\\'s not clear from the documentation.\\n\\nI would like to use my \\'real world\\' example. Following is what I see when I run the `git status` command on the top level of my branch:\\n\\n> On branch amd_qlp_tester\\n>\\n> Your branch is ahead of \\'origin/amd_qlp_tester\\' by 5 commits.\\n>\\n> etc...\\n\\nMy branch name is `amd_qlp_tester` but it was \"branched\" off from the main branch (if I have the terms wrong it\\'s because of my SVN background). But then there is also the name `origin/amd_qlp_testser`\\n\\nSo how do I phrase my push command?\\n\\nIs it any of the following?\\n\\n\\ngit push origin/amd_qlp_tester\\ngit push origin amd_qlp_tester\\ngit push amd_qlp_tester\\ngit push origin\\ngit push\\n",
+      "answer": "[Complete answer text here, including ALL explanations and code examples] If your Local branch and remote branch is the same name then you can just do it:\\n\\n\\ngit push origin branchName\\n\\n\\nWhen your local and remote branch name is different then you can do it:\\n\\n\\ngit push origin localBranchName:remoteBranchName\\n",
+      "commands": [
+        "git push origin branchName git push origin localBranchName:remoteBranchName"
+      ],
+      "topic": "git",
+      "category": "version_control",
+      "source_query": "git command examples",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:44:25.336101",
+      "tags": [
+        "commit",
+        "git",
+        "branch"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "\\nI\\'m trying to compress a folder (`/var/www/`) to `~/www_backups/$time.tar` where `$time` is the current date.\\n\\nThis is what I have:\\n\\n\\ncd /var/www && sudo tar -czf ~/www_backups $time\"\\n\\n\\nI am completely lost and I\\'ve been at this for hours now. Not sure if `-czf` is correct. I simply want to copy all of the content in `/var/www` into a `$time.tar` file, and I want to maintain the file permissions for all of the files. Can anyone help me out?\\n",
+      "answer": "\\nTo `tar` and `gzip` a folder, the syntax is:\\n\\n\\ntar czf name_of_archive_file.tar.gz name_of_directory_to_tar\\n\\n\\nAdding `-` before the options (`czf`) is optional with `tar`. The effect of `czf` is as follows:\\n\\n* `c` — create an archive file (as opposed to extract, which is `x`)\\n* `f` — filename of the archive file\\n* `z` — filter archive through `gzip` (remove this option to create a `.tar` file)\\n\\nIf you want to `tar` the current directory, use `.` to designate that.\\n\\nTo construct filenames dynamically, use the `date` utility (look at its man page for the available format options). For example:\\n\\n\\ncd /var/www &&\\ntar czf ~/www_backups/$(date +%Y%m%d-%H%M%S).tar.gz .\\n\\n\\nThis will create a file named something like `20120902-185558.tar.gz`.\\n\\nOn Linux, chances are your `tar` also supports BZip2 compression with the `j` rather than `z` option. And possibly others. Check the man page on your local system.\\n",
+      "commands": [
+        "tar",
+        "gzip"
+      ],
+      "topic": "file_ops",
+      "category": "file_operations",
+      "source_query": "tar gzip command examples",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:45:55.522385",
+      "tags": [
+        "sudo",
+        "gzip",
+        "compress",
+        "archive",
+        "sed"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "\\nI am using **Python 2.7** + **virtualenv version 1.10.1** for running `myproject` project. Due to some other projects requirement I have to work with another version of Python (3.5). For this I have installed Python in my user directory. Also I have downloaded and installed [`virtualenv`](https://virtualenv.pypa.io/en/latest/) (**version 15.1.0**) into my user directory.\\n\\nBut whenever I am trying to create virtual `env` I am getting the below error\\n\\n\\npython virtualenv/virtualenv.py myproject\\n\\n\\n---\\n\\n\\nUsing base prefix '/home/myuser/python3'\\nNew python executable in /home/mount/myuser/project_python3/myproject/bin/python\\nERROR: The executable /home/mount/myuser/project_python3/myproject/bin/python is not functioning\\nERROR: It thinks sys.prefix is '/home/myuser/python3' (should be '/home/mount/myuser/project_python3/myproject')\\nERROR: virtualenv is not compatible with this system or executable\\n\\n\\nWhat am I doing wrong here and how do I solve it?\\n",
+      "answer": "\\nIn Python 3.6+, the `pyvenv` module is *deprecated*. Use the following one-liner instead:\\n\\n\\npython3 -m venv \\n\\n\\nThis is the [recommended way](https://docs.python.org/3/library/venv.html) to create *virtual environments* by the Python community.\\n",
+      "commands": [
+        "Python 3.6+, the `pyvenv` module is *deprecated*. Use the following one-liner instead:\\n\\n\\npython3 -m venv \\n\\n\\nThis is the [recommended way](https://docs.python.org/3/library/venv.html) to create *virtual environments* by the Python community.\\n \\npython3 -m venv \\n"
+      ],
+      "topic": "python_env",
+      "category": "shell_scripting",
+      "source_query": "python venv pip commands",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:47:44.047017",
+      "tags": [
+        "cut",
+        "python",
+        "venv",
+        "virtualenv"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "\\nCan anyone explain these command lines from GitHub \"git tutorial\"?\\n\\nEvery time you create a new repository on GitHub, it shows you these command lines that I\\'ve always found useful...\\n\\n\\necho \"# Project\" >> README.md\\ngit init\\ngit add README.md\\ngit commit -m \"first commit\"\\ngit branch -M master\\ngit remote add origin https://github.com/Username/Project.git\\ngit push -u origin master\\n\\n\\nBut I have no idea what they really do... Can anyone help this poor Git newbie?\\n",
+      "answer": "\\n\\necho \"# Project\" >> README.md\\n\\n\\nThis creates a README in your current directory\\n\\n\\ngit init\\n\\n\\nThis will create a new .git directory to store commits and other objects.\\n\\n\\ngit add README.md\\n\\n\\nBefore adding a file to the repository, it must first be staged.\\n\\n\\ngit commit -m \"initial commit\"\\n\\n\\nThis would commit our staged changes into the repository.\\n\\n\\ngit branch -M master\\n\\n\\nWith a -m or -M option, oldbranch will be renamed to newbranch. If oldbranch had a corresponding reflog, it is renamed to match newbranch, and a reflog entry is created to remember the branch renaming. If newbranch exists, -M must be used to force the rename to happen\\n\\n\\ngit remote add origin https://github.com/Username/Project.git\\n\\n\\nThis would add a remote url to an existing git repository\\n\\n\\ngit push -u origin master\\n\\n\\nPush - moves/uploads the local changes (or snapshot) to the remote GitLab repository\\n",
+      "commands": [
+        "git repository\\n\\n\\ngit push -u origin master\\n\\n\\nPush - moves/uploads the local changes (or snapshot) to the remote GitLab repository\\n \\necho \"# Project\" >> README.md\\ngit init\\ngit add README.md\\ngit commit -m \"initial commit\"\\ngit branch -M master\\ngit remote add origin https://github.com/Username/Project.git\\ngit push -u origin master\\n"
+      ],
+      "topic": "git",
+      "category": "version_control",
+      "source_query": "github command line tutorials",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:53:35.193733",
+      "tags": [
+        "git",
+        "branch",
+        "repository",
+        "sed",
+        "command line"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "[suspend` is a builtin command in Bash. When would you naturally use this command and find it useful?]",
+      "answer": "[Let's say you lack both GNU `screen` and `tmux` (and X11, *and* virtual consoles) but want to switch between a login shell and another interactive shell.\\n\\nYou would first login on the console, and then start a new shell, temporarily blocking the login shell. To get the login shell back to do some work there, you'd do `suspend`. Then you would `fg` to get the interactive shell back to continue with whatever it was you did there.\\n\\nIn fact, with job control, the login shell could spawn a number of interactive shells as background jobs that you could switch to with `fg %1`, `fg %2` etc., but to get back to the login shell, you would need to use `suspend` unless you wanted to manually `kill -s STOP $$`.\\n\\nAlso note that `Ctrl`+`Z` at the prompt in an interactive shell won't suspend it.]",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_query": "bash scripting examples",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:54:43.378098",
+      "tags": [
+        "tar",
+        "find",
+        "shell",
+        "bash"
+      ]
+    }
+  ]
+}

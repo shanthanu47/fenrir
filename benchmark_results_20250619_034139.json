@@ -1,0 +1,251 @@
+{
+  "base_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "- `git` (command name) - Branch name: new_branch - Command: create a new git branch - Output: ``` new_branch  (current directory) ```  - `cd` (Command Name)    - Directory: current directory    ```    cd /path/to/your/directory        Output:    /path/the/directory/new_branches    (current working directory)  - Set the current directory to the new_branches directory     - Command : set -e    output:   set -e",
+      "commands": [
+        "- `git` (command name) - Branch name: new_branch - Command: create a new git branch - Output: ``` new_branch  (current directory) ```  - `cd` (Command Name)    - Directory: current directory    ```    cd /path/to/your/directory        Output:    /path/the/directory/new_branches    (current working directory)  - Set the current directory to the new_branches directory     - Command : set -e    output:   set -e"
+      ],
+      "bleu_score": 0.003324612889947367,
+      "rouge_score": 0.10344827586206896,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "- `mkdir report_folder`  (create directory) - `-s` flag to set the script's execution time to 10 seconds -  `find . -type f -name \"*.txt\" -print0` (find all files ending with \".txt\") -   `xargs -0`   (process the output from find)     -   `-d` option to delete the found files - |  `grep \"^[A-Z]\"` (filter out any files that start with a letter)   `|`  pipe to find -     `xarg",
+      "commands": [
+        "- `mkdir report_folder`  (create directory) - `-s` flag to set the script's execution time to 10 seconds -  `find . -type f -name \"*.txt\" -print0` (find all files ending with \".txt\") -   `xargs -0`   (process the output from find)     -   `-d` option to delete the found files - |  `grep \"^[A-Z]\"` (filter out any files that start with a letter)   `|`  pipe to find -     `xarg"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.030769230769230767,
+      "quality_score": 1
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "- `ls -R` -  `find . -type f` ```python import os import sys import glob  def list_python_files(directory):     # Find all files and directories recursively in the given directory     files = glob.glob(os.path.join(directory, '*'))     return files  if __name__ == \"__main__\":     directory = \".\"     python_list = list_ python_files (directory)     print(python_list) ``` The output is expected to be the list of Python files, with each",
+      "commands": [
+        "- `ls -R` -  `find . -type f` ```python import os import sys import glob  def list_python_files(directory):     # Find all files and directories recursively in the given directory     files = glob.glob(os.path.join(directory",
+        "'*'))     return files  if __name__ == \"__main__\":     directory = \".\"     python_list = list_ python_files (directory)     print(python_list) ``` The output is expected to be the list of Python files",
+        "with each"
+      ],
+      "bleu_score": 0.0035548168188028837,
+      "rouge_score": 0.08955223880597016,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "1.  `python3 -m venv myenv` 2.  activate, `source ~/.bashrc` 3.  Install requests with pip 4.  Activate the virtual environment 5.  List the files in the virtual envirnoment 6.  Deactivate the virtual environment 7.  Run a Python script 8.  Print the current working directory  ```bash # Command 1 python3 ``` ```  **Output:**  ``` Python   (venv) ```",
+      "commands": [
+        "1.  `python3 -m venv myenv` 2.  activate",
+        "`source ~/.bashrc` 3.  Install requests with pip 4.  Activate the virtual environment 5.  List the files in the virtual envirnoment 6.  Deactivate the virtual environment 7.  Run a Python script 8.  Print the current working directory  ```bash # Command 1 python3 ``` ```  **Output:**  ``` Python   (venv) ```"
+      ],
+      "bleu_score": 0.008360958777149229,
+      "rouge_score": 0.16666666666666669,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "1.  head 2.  tail 3.  awk  ```bash #!/bin/bash  # fetch the first 10 lines of output. log head,output.log ```",
+      "commands": [
+        "1.  head 2.  tail 3.  awk  ```bash #!/bin/bash  # fetch the first 10 lines of output. log head",
+        "output.log ```"
+      ],
+      "bleu_score": 0.012673718536830811,
+      "rouge_score": 0.32000000000000006,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "- python3 -m venv .venv - pip install -r requirements.text - git init --echo - clone https://github.com/your-repository-url/your_repo - cd .venv  # Change directory to the virtual environment - source .venv/bin/activate - exit - commit -m \"Initial commit\" -git add . -Git commit -mm ```  Now, write the command sequence to set up a full Python development enviornment with virtual environement, install dependancies from requirements file, initialize Git repo, and Create inital commit.",
+      "commands": [
+        "- python3 -m venv .venv - pip install -r requirements.text - git init --echo - clone https://github.com/your-repository-url/your_repo - cd .venv  # Change directory to the virtual environment - source .venv/bin/activate - exit - commit -m \"Initial commit\" -git add . -Git commit -mm ```  Now",
+        "write the command sequence to set up a full Python development enviornment with virtual environement",
+        "install dependancies from requirements file",
+        "initialize Git repo",
+        "and Create inital commit."
+      ],
+      "bleu_score": 0.022737959568627685,
+      "rouge_score": 0.3260869565217391,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "```bash ps, grep, awk, sort, head, tail ```  Draft the complete command sequence. ``` ps aux, grep -v 'running' , awk '{print $1, \"CPU usage: \" }', sort,  head -n 20, tail -n -20 | while read process; do   if [ \"$process\" =~ ^[0-9]+$ ] ; then     cpu_usage=$(ps -u \"$process\")     awk '{print \\$1, \"\\$(echo \"CPU Usage: \")$}' \"{}\" | sort | head -n",
+      "commands": [
+        "```bash ps",
+        "grep",
+        "awk",
+        "sort",
+        "head",
+        "tail ```  Draft the complete command sequence. ``` ps aux",
+        "grep -v 'running'",
+        "awk '{print $1",
+        "\"CPU usage: \" }'",
+        "sort"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.03389830508474576,
+      "quality_score": 1
+    }
+  ],
+  "finetuned_model": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "response": "git checkout -b <branch_name> git branch <branch-name>",
+      "commands": [
+        "git checkout -b <branch_name> git branch <branch-name>"
+      ],
+      "bleu_score": 0.16348126556655487,
+      "rouge_score": 0.5714285714285714,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "response": "- tar -czf archive.tar.{ext}.gz Archive - zip -r reports.zip archive.gz  Use gzip compression format archive.txt.gz The archive.ts is the result of this command.",
+      "commands": [
+        "- tar -czf archive.tar.{ext}.gz Archive - zip -r reports.zip archive.gz  Use gzip compression format archive.txt.gz The archive.ts is the result of this command."
+      ],
+      "bleu_score": 0.017514895362802613,
+      "rouge_score": 0.28571428571428575,
+      "quality_score": 2
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "response": "- find, -type f - grep -l, -in, - sort, -k, use, -c - xargs, -n 1  Use this information to generate a list of filenames that will be used for recursive listing.  Note: The current directory is \".\" The command should only use one file to create a list for each iteration.",
+      "commands": [
+        "- find",
+        "-type f - grep -l",
+        "-in",
+        "- sort",
+        "-k",
+        "use",
+        "-c - xargs",
+        "-n 1  Use this information to generate a list of filenames that will be used for recursive listing.  Note: The current directory is \".\" The command should only use one file to create a list for each iteration."
+      ],
+      "bleu_score": 0.008083053722455262,
+      "rouge_score": 0.11320754716981132,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "response": "- python -m venv .venv - source .venv/bin/activate - pip install requests - deactivate",
+      "commands": [
+        "- python -m venv .venv - source .venv/bin/activate - pip install requests - deactivate"
+      ],
+      "bleu_score": 0.11889099988983354,
+      "rouge_score": 0.8181818181818182,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "response": "- awk '{print $0}' - - grep -v -E '.*' - Use this command to find files that have names containing \"pattern\". - sed -e 's/pattern//g' -  The command sed -e '{s/example/pattern/g;}' -",
+      "commands": [
+        "- awk '{print $0}' - - grep -v -E '.*' - Use this command to find files that have names containing \"pattern\". - sed -e 's/pattern//g' -  The command sed -e '{s/example/pattern/g;}' -"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.0,
+      "quality_score": 1
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "response": "- python -m venv .venv - pip install -r requirements.pip - git init --echo - add . - commit -m \"Initial commit\" - push git@github.com:your_username/your_repo.git ```",
+      "commands": [
+        "- python -m venv .venv - pip install -r requirements.pip - git init --echo - add . - commit -m \"Initial commit\" - push git@github.com:your_username/your_repo.git ```"
+      ],
+      "bleu_score": 0.08272070209167838,
+      "rouge_score": 0.6382978723404256,
+      "quality_score": 2
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "response": "Use ps, sort, head, grep, awk, tee, mail -s \"Warning\" Use find, -name \"*.exe\", -printf %t, -type f, -d 1, -exec gzip > /dev/null  # Get the process ID Use grep -v, -E, -f, -z, -c, to filter lines containing the process name. Use awk, '{print $1, $2}' to extract the process's name and PID. Then, use mail to send the email with the process information. The mail command may fail if the email",
+      "commands": [
+        "Use ps",
+        "sort",
+        "head",
+        "grep",
+        "awk",
+        "tee",
+        "mail -s \"Warning\" Use find",
+        "-name \"*.exe\"",
+        "-printf %t",
+        "-type f"
+      ],
+      "bleu_score": 0,
+      "rouge_score": 0.0,
+      "quality_score": 1
+    }
+  ],
+  "comparison": [
+    {
+      "prompt": "Create a new Git branch and switch to it.",
+      "base_better": 1.1067728887520163,
+      "finetuned_better": 2.734909836995126,
+      "improvement": {
+        "bleu": 0.1601566526766075,
+        "rouge": 0.46798029556650245,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "Compress the folder reports into reports.tar.gz.",
+      "base_better": 1.0307692307692307,
+      "finetuned_better": 2.3032291810770884,
+      "improvement": {
+        "bleu": 0.017514895362802613,
+        "rouge": 0.254945054945055,
+        "quality": 1
+      }
+    },
+    {
+      "prompt": "List all Python files in the current directory recursively.",
+      "base_better": 1.093107055624773,
+      "finetuned_better": 1.1212906008922665,
+      "improvement": {
+        "bleu": 0.004528236903652378,
+        "rouge": 0.023655308363841165,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Set up a virtual environment and install requests.",
+      "base_better": 2.175027625443816,
+      "finetuned_better": 2.937072818071652,
+      "improvement": {
+        "bleu": 0.1105300411126843,
+        "rouge": 0.6515151515151516,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Fetch only the first ten lines of a file named output.log.",
+      "base_better": 1.332673718536831,
+      "finetuned_better": 1.0,
+      "improvement": {
+        "bleu": -0.012673718536830811,
+        "rouge": -0.32000000000000006,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Set up a complete Python development environment with virtual environment, install dependencies from requirements.txt, initialize git repository, and create initial commit.",
+      "base_better": 2.3488249160903667,
+      "finetuned_better": 2.721018574432104,
+      "improvement": {
+        "bleu": 0.05998274252305069,
+        "rouge": 0.3122109158186865,
+        "quality": 0
+      }
+    },
+    {
+      "prompt": "Find all processes consuming more than 80% CPU, log their details to a file, and send a notification email to admin@company.com.",
+      "base_better": 1.0338983050847457,
+      "finetuned_better": 1.0,
+      "improvement": {
+        "bleu": 0,
+        "rouge": -0.03389830508474576,
+        "quality": 0
+      }
+    }
+  ]
+}

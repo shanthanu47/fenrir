@@ -1,0 +1,3175 @@
+{
+  "metadata": {
+    "total_qa_pairs": 350,
+    "target_per_topic": 50,
+    "topics_covered": [
+      "Git",
+      "Bash",
+      "Tar/Gzip",
+      "Grep",
+      "Venv",
+      "Docker",
+      "Linux"
+    ],
+    "generation_date": "2025-06-18T15:50:16.732324",
+    "workflow_steps": [
+      "1. Initialize browser using Browser Use",
+      "2. Search for top interview questions on specific topics",
+      "3. Access links and extract question, answer, commands, and source",
+      "4. Save extracted data in CSV and JSON files",
+      "5. Stop when we have 50 Q&A pairs for each topic"
+    ]
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 2,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 3,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 4,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 5,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 6,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 7,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 8,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 9,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 10,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 11,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 12,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 13,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 14,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 15,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 16,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 17,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 18,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 19,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 20,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 21,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 22,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 23,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 24,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 25,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 26,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 27,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 28,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 29,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 30,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 31,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 32,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 33,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 34,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 35,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 36,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 37,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 38,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 39,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 40,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 41,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 42,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 43,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 44,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 45,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 46,
+      "topic": "Git",
+      "question": "What is the difference between git pull and git fetch?",
+      "answer": "git fetch downloads changes from the remote repository but does not merge them into your current branch. git pull downloads changes and automatically merges them into your current branch. git pull = git fetch + git merge.",
+      "commands": "git fetch origin\ngit pull origin main\ngit merge origin/main",
+      "source": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 47,
+      "topic": "Git",
+      "question": "How do you create and switch to a new branch in Git?",
+      "answer": "You can create a new branch using git branch <branch-name> and then switch to it using git checkout <branch-name>. Alternatively, you can do both in one command using git checkout -b <branch-name>.",
+      "commands": "git branch feature-branch\ngit checkout feature-branch\ngit checkout -b feature-branch",
+      "source": "https://stackoverflow.com/questions/1394797/how-to-create-a-branch-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 48,
+      "topic": "Git",
+      "question": "How do you undo the last commit in Git?",
+      "answer": "To undo the last commit while keeping changes staged, use git reset --soft HEAD~1. To undo and unstage changes, use git reset HEAD~1. To completely remove the commit and changes, use git reset --hard HEAD~1.",
+      "commands": "git reset --soft HEAD~1\ngit reset HEAD~1\ngit reset --hard HEAD~1",
+      "source": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 49,
+      "topic": "Git",
+      "question": "How do you resolve merge conflicts in Git?",
+      "answer": "When a merge conflict occurs, Git marks the conflicted areas in the files. You need to manually edit the files to resolve conflicts, then add and commit the resolved files.",
+      "commands": "git status\ngit add conflicted-file.txt\ngit commit -m \"Resolve merge conflict\"",
+      "source": "https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 50,
+      "topic": "Git",
+      "question": "How do you revert a commit that has already been pushed?",
+      "answer": "Use git revert to create a new commit that undoes the changes from a previous commit. This is safer than git reset when the commit has been shared.",
+      "commands": "git revert <commit-hash>\ngit revert HEAD",
+      "source": "https://stackoverflow.com/questions/1270514/undoing-a-git-push",
+      "timestamp": "2025-06-18T15:50:10.575797"
+    },
+    {
+      "id": 51,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 52,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 53,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 54,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 55,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 56,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 57,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 58,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 59,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 60,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 61,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 62,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 63,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 64,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 65,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 66,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 67,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 68,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 69,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 70,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 71,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 72,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 73,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 74,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 75,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 76,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 77,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 78,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 79,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 80,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 81,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 82,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 83,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 84,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 85,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 86,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 87,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 88,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 89,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 90,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 91,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 92,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 93,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 94,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 95,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 96,
+      "topic": "Bash",
+      "question": "How do you check if a file exists in a bash script?",
+      "answer": "Use the -f test operator within an if statement to check if a file exists and is a regular file.",
+      "commands": "if [ -f \"/path/to/file\" ]; then\n    echo \"File exists\"\nfi",
+      "source": "https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 97,
+      "topic": "Bash",
+      "question": "How do you iterate over files in a directory using bash?",
+      "answer": "Use a for loop with a wildcard pattern to iterate over files in a directory.",
+      "commands": "for file in /path/to/directory/*; do\n    echo \"Processing $file\"\ndone",
+      "source": "https://stackoverflow.com/questions/20796200/how-to-loop-over-files-in-directory-and-change-path-and-add-suffix-to-filename",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 98,
+      "topic": "Bash",
+      "question": "How do you read user input in a bash script?",
+      "answer": "Use the read command to get user input and store it in a variable.",
+      "commands": "read -p \"Enter your name: \" username\necho \"Hello $username\"",
+      "source": "https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 99,
+      "topic": "Bash",
+      "question": "How do you check if a variable is empty in bash?",
+      "answer": "Use the -z test operator to check if a variable is empty, or -n to check if it is not empty.",
+      "commands": "if [ -z \"$variable\" ]; then\n    echo \"Variable is empty\"\nfi",
+      "source": "https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 100,
+      "topic": "Bash",
+      "question": "How do you define and call a function in bash?",
+      "answer": "Define a function using function name() { commands; } or name() { commands; }, then call it by using just the function name.",
+      "commands": "function greet() {\n    echo \"Hello $1\"\n}\ngreet \"World\"",
+      "source": "https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function",
+      "timestamp": "2025-06-18T15:50:11.580698"
+    },
+    {
+      "id": 101,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 102,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 103,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 104,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 105,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 106,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 107,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 108,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 109,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 110,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 111,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 112,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 113,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 114,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 115,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 116,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 117,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 118,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 119,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 120,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 121,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 122,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 123,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 124,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 125,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 126,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 127,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 128,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 129,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 130,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 131,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 132,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 133,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 134,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 135,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 136,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 137,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 138,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 139,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 140,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 141,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 142,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 143,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 144,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 145,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 146,
+      "topic": "Tar/Gzip",
+      "question": "How do you create a compressed tar archive?",
+      "answer": "Use tar with the -czf flags to create a compressed gzip archive. -c creates archive, -z compresses with gzip, -f specifies filename.",
+      "commands": "tar -czf archive.tar.gz /path/to/directory/\ntar -czf backup.tar.gz file1.txt file2.txt",
+      "source": "https://stackoverflow.com/questions/18681595/tar-a-directory-but-dont-store-full-absolute-paths-in-the-archive",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 147,
+      "topic": "Tar/Gzip",
+      "question": "How do you extract a tar.gz archive?",
+      "answer": "Use tar with -xzf flags to extract a compressed archive. -x extracts, -z handles gzip compression, -f specifies filename.",
+      "commands": "tar -xzf archive.tar.gz\ntar -xzf archive.tar.gz -C /destination/path/",
+      "source": "https://stackoverflow.com/questions/8371925/how-to-extract-tar-file-to-a-specific-directory",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 148,
+      "topic": "Tar/Gzip",
+      "question": "How do you list contents of a tar archive without extracting?",
+      "answer": "Use tar with -tzf flags to list the contents of a compressed archive without extracting it.",
+      "commands": "tar -tzf archive.tar.gz\ntar -tvzf archive.tar.gz",
+      "source": "https://stackoverflow.com/questions/1043674/how-to-see-the-contents-of-a-tar-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 149,
+      "topic": "Tar/Gzip",
+      "question": "How do you compress a file using gzip?",
+      "answer": "Use gzip command to compress files. The original file is replaced with a .gz version.",
+      "commands": "gzip filename.txt\ngzip -c filename.txt > filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/4521351/gzip-compress-without-removing-the-original-file",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 150,
+      "topic": "Tar/Gzip",
+      "question": "How do you decompress a gzip file?",
+      "answer": "Use gunzip command or gzip -d to decompress .gz files.",
+      "commands": "gunzip filename.txt.gz\ngzip -d filename.txt.gz",
+      "source": "https://stackoverflow.com/questions/29705069/decompress-tar-gz-file-using-python",
+      "timestamp": "2025-06-18T15:50:12.595748"
+    },
+    {
+      "id": 151,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 152,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 153,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 154,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 155,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 156,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 157,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 158,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 159,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 160,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 161,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 162,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 163,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 164,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 165,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 166,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 167,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 168,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 169,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 170,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 171,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 172,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 173,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 174,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 175,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 176,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 177,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 178,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 179,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 180,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 181,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 182,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 183,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 184,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 185,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 186,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 187,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 188,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 189,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 190,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 191,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 192,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 193,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 194,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 195,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 196,
+      "topic": "Grep",
+      "question": "How do you search for a pattern recursively in directories using grep?",
+      "answer": "Use grep with the -r (recursive) flag to search through all files in a directory and its subdirectories.",
+      "commands": "grep -r \"pattern\" /path/to/directory/\ngrep -r \"function\" .",
+      "source": "https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 197,
+      "topic": "Grep",
+      "question": "How do you use grep to show line numbers with matches?",
+      "answer": "Use the -n flag with grep to display line numbers alongside the matching lines.",
+      "commands": "grep -n \"pattern\" filename.txt\ngrep -rn \"function\" .",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 198,
+      "topic": "Grep",
+      "question": "How do you use grep with case-insensitive search?",
+      "answer": "Use the -i flag with grep to perform case-insensitive pattern matching.",
+      "commands": "grep -i \"pattern\" filename.txt\ngrep -ri \"error\" /var/log/",
+      "source": "https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 199,
+      "topic": "Grep",
+      "question": "How do you exclude certain patterns with grep?",
+      "answer": "Use the -v flag with grep to invert the match, showing lines that do NOT contain the pattern.",
+      "commands": "grep -v \"pattern\" filename.txt\nps aux | grep -v grep",
+      "source": "https://stackoverflow.com/questions/1987926/how-do-i-grep-and-show-the-line-number",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 200,
+      "topic": "Grep",
+      "question": "How do you use grep with regular expressions?",
+      "answer": "grep supports basic regular expressions by default. Use -E for extended regex or egrep.",
+      "commands": "grep \"^start\" filename.txt\ngrep -E \"pattern1|pattern2\" filename.txt",
+      "source": "https://stackoverflow.com/questions/12943493/how-to-use-grep-with-or-logic",
+      "timestamp": "2025-06-18T15:50:13.596478"
+    },
+    {
+      "id": 201,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 202,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 203,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 204,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 205,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 206,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 207,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 208,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 209,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 210,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 211,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 212,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 213,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 214,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 215,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 216,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 217,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 218,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 219,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 220,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 221,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 222,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 223,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 224,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 225,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 226,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 227,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 228,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 229,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 230,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 231,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 232,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 233,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 234,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 235,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 236,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 237,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 238,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 239,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 240,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 241,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 242,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 243,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 244,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 245,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 246,
+      "topic": "Venv",
+      "question": "How do you create a Python virtual environment?",
+      "answer": "Use python -m venv to create a virtual environment. This creates an isolated Python environment.",
+      "commands": "python -m venv myenv\npython3 -m venv venv",
+      "source": "https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 247,
+      "topic": "Venv",
+      "question": "How do you activate a virtual environment?",
+      "answer": "The activation command depends on your operating system. On Windows use Scripts\\activate, on Linux/Mac use bin/activate.",
+      "commands": "source venv/bin/activate\nvenv\\Scripts\\activate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 248,
+      "topic": "Venv",
+      "question": "How do you deactivate a virtual environment?",
+      "answer": "Simply run the deactivate command from within the activated virtual environment.",
+      "commands": "deactivate",
+      "source": "https://stackoverflow.com/questions/8648906/how-do-i-activate-a-virtualenv",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 249,
+      "topic": "Venv",
+      "question": "How do you install packages in a virtual environment?",
+      "answer": "Activate the virtual environment first, then use pip install to install packages.",
+      "commands": "source venv/bin/activate\npip install package_name\npip install -r requirements.txt",
+      "source": "https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 250,
+      "topic": "Venv",
+      "question": "How do you list installed packages in a virtual environment?",
+      "answer": "Use pip list or pip freeze to see installed packages. pip freeze is commonly used for creating requirements.txt.",
+      "commands": "pip list\npip freeze\npip freeze > requirements.txt",
+      "source": "https://stackoverflow.com/questions/739993/how-can-i-get-a-list-of-locally-installed-python-modules",
+      "timestamp": "2025-06-18T15:50:14.611392"
+    },
+    {
+      "id": 251,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 252,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 253,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 254,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 255,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 256,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 257,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 258,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 259,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 260,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 261,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 262,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 263,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 264,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 265,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 266,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 267,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 268,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 269,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 270,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 271,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 272,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 273,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 274,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 275,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 276,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 277,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 278,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 279,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 280,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 281,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 282,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 283,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 284,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 285,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 286,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 287,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 288,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 289,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 290,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 291,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 292,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 293,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 294,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 295,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 296,
+      "topic": "Docker",
+      "question": "How do you build a Docker image from a Dockerfile?",
+      "answer": "Use docker build command with -t flag to tag the image and specify the build context.",
+      "commands": "docker build -t myapp:latest .\ndocker build -t myapp:v1.0 /path/to/dockerfile/",
+      "source": "https://stackoverflow.com/questions/27134618/how-to-properly-build-docker-image",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 297,
+      "topic": "Docker",
+      "question": "How do you run a Docker container?",
+      "answer": "Use docker run command. Common flags include -d for detached mode, -p for port mapping, and -v for volume mounting.",
+      "commands": "docker run myapp\ndocker run -d -p 8080:80 myapp\ndocker run -it myapp /bin/bash",
+      "source": "https://stackoverflow.com/questions/20813486/example-of-how-to-use-docker-run",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 298,
+      "topic": "Docker",
+      "question": "How do you list running Docker containers?",
+      "answer": "Use docker ps to list running containers, or docker ps -a to list all containers including stopped ones.",
+      "commands": "docker ps\ndocker ps -a",
+      "source": "https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 299,
+      "topic": "Docker",
+      "question": "How do you stop and remove Docker containers?",
+      "answer": "Use docker stop to stop a running container and docker rm to remove it. You can combine both operations.",
+      "commands": "docker stop container_id\ndocker rm container_id\ndocker stop $(docker ps -q)",
+      "source": "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 300,
+      "topic": "Docker",
+      "question": "How do you execute commands in a running Docker container?",
+      "answer": "Use docker exec to run commands in a running container. Use -it flags for interactive terminal access.",
+      "commands": "docker exec container_id ls\ndocker exec -it container_id /bin/bash",
+      "source": "https://stackoverflow.com/questions/20932357/docker-enter-running-container",
+      "timestamp": "2025-06-18T15:50:15.618220"
+    },
+    {
+      "id": 301,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 302,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 303,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 304,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 305,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 306,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 307,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 308,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 309,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 310,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 311,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 312,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 313,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 314,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 315,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 316,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 317,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 318,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 319,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 320,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 321,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 322,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 323,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 324,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 325,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 326,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 327,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 328,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 329,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 330,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 331,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 332,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 333,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 334,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 335,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 336,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 337,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 338,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 339,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 340,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 341,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 342,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 343,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 344,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 345,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 346,
+      "topic": "Linux",
+      "question": "How do you change file permissions in Linux?",
+      "answer": "Use chmod command to change file permissions. You can use numeric notation (755) or symbolic notation (u+x).",
+      "commands": "chmod 755 filename.sh\nchmod u+x filename.sh\nchmod -R 644 /path/to/directory/",
+      "source": "https://stackoverflow.com/questions/14372486/how-to-change-the-permission-of-a-file-using-chmod-command-by-giving-the-octal",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 347,
+      "topic": "Linux",
+      "question": "How do you find files by name in Linux?",
+      "answer": "Use the find command to search for files by name, type, or other criteria.",
+      "commands": "find /path -name \"filename.txt\"\nfind . -name \"*.py\"\nfind /home -type f -name \"*.log\"",
+      "source": "https://stackoverflow.com/questions/6844785/how-to-use-the-find-command-to-search-for-files",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 348,
+      "topic": "Linux",
+      "question": "How do you monitor system processes in Linux?",
+      "answer": "Use ps, top, or htop commands to monitor running processes. ps shows snapshot, top shows real-time updates.",
+      "commands": "ps aux\ntop\nps -ef | grep process_name",
+      "source": "https://stackoverflow.com/questions/4506975/how-can-i-see-all-running-processes",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 349,
+      "topic": "Linux",
+      "question": "How do you check disk space usage in Linux?",
+      "answer": "Use df command to check filesystem disk space usage and du command to check directory space usage.",
+      "commands": "df -h\ndu -sh /path/to/directory\ndu -h --max-depth=1",
+      "source": "https://stackoverflow.com/questions/1189985/how-to-check-disk-space-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    },
+    {
+      "id": 350,
+      "topic": "Linux",
+      "question": "How do you create and manage symbolic links?",
+      "answer": "Use ln -s command to create symbolic links (symlinks) that point to other files or directories.",
+      "commands": "ln -s /path/to/original /path/to/link\nls -la\nreadlink linkname",
+      "source": "https://stackoverflow.com/questions/1753070/how-do-i-create-a-symbolic-link-in-linux",
+      "timestamp": "2025-06-18T15:50:16.626909"
+    }
+  ]
+}

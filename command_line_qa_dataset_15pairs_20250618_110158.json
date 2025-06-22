@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "total_qa_pairs": 15,
+    "target_count": 180,
+    "generation_date": "2025-06-18T11:01:58.414309",
+    "topics_covered": [
+      "bash",
+      "text_tools"
+    ],
+    "categories": [
+      "shell_scripting",
+      "file_management",
+      "text_processing"
+    ],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate"
+    ],
+    "status": "partial"
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "question": "\\nHow do I get the directory where a Bash script is located from within the script itself?\\nHow do I get the path of the directory in which a Bash script is located, inside that script?\\nI want to use a Bash script as a launcher for another application. I want to change the working directory ...\\n",
+      "answer": "\\nCommunity wiki\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.705793",
+      "tags": [
+        "script",
+        "bash"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "\\nHow do I check if a directory exists or not in a Bash shell script?\\nWhat command checks if a directory exists or not within a Bash shell script?\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.705793",
+      "tags": [
+        "shell",
+        "script",
+        "bash"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "\\nHow do I tell if a file does not exist in Bash?\\nThis checks if a file exists:\\n#!/bin/bash\\nFILE=$1\\nif [ -f $FILE ]; then\\necho \"File $FILE exists.\"\\nelse\\necho \"File $FILE does not exist.\"\\nfi\\nHow do I only check if the ...\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "\\nEcho newline in Bash prints literal \\\\n\\nHow do I print a newline? This merely prints \\\\n:\\necho -e \"Hello,\\\\nWorld!\"\\nOutput:\\nHello,\\\\nWorld!\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "\\nHow to check if a string contains a substring in Bash\\nI have a string in Bash:\\nstring=\"My string\"\\nHow can I test if it contains another string?\\nif [ $string ?? \\'foo\\' ]; then\\necho \"It\\'s there!\"\\nfi\\nWhere ?? is my unknown operator. ...\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "\\nHow to concatenate string variables in Bash\\nIn PHP, strings are concatenated together as follows:\\n$foo = \"Hello\";\\n$foo .= \" World\";\\nHere, $foo becomes \"Hello World\".\\nHow is this accomplished in Bash?\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "\\nHow can I check if a program exists from a Bash script?\\nHow would I validate that a program exists, in a way that will either return an error and exit, or continue with the script?\\nIt seems like it should be easy, but it\\'s been stumping me.\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "script",
+        "bash"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "\\nHow do I split a string on a delimiter in Bash?\\nI have this string stored in a variable:\\nIN=\"bla@some.com;john@home.com\"\\nNow I would like to split the strings by ; delimiter so that I have:\\nADDR1=\"bla@some.com\"\\nADDR2=\"john@home.com\"\\nI don\\'t ...\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "\\nExtract filename and extension in Bash\\nI want to get the filename (without extension) and the extension separately.\\nThe best solution I found so far is:\\nNAME=`echo \"$FILE\" | cut -d\\'.\\' -f1`\\nEXTENSION=`echo \"$FILE\" | cut -d\\'.\\' -f2`\\nThis is ...\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "extract",
+        "cut",
+        "bash"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "\\nHow to change the output color of echo in Linux\\nI am trying to print a text in a red color in the terminal using echo command.\\nHow can I do that?\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "file_management",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "terminal"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "\\nHow do I parse command line arguments in Bash?\\nSay, I have a script that gets called with this line:\\n./myscript -vfd ./foo/bar/someFile -o /fizz/someOtherFile\\nor this one:\\n./myscript -v -f -d -o /fizz/someOtherFile ./foo/bar/someFile\\nWhat\\'s the ...\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "command line",
+        "script",
+        "bash"
+      ]
+    },
+    {
+      "id": 12,
+      "question": "\\nHow do I set a variable to the output of a command in Bash?\\nI have a pretty simple script that is something like the following:\\n#!/bin/bash\\nVAR1=\"$1\"\\nMOREF=\\'sudo run command against $VAR1 | grep name | cut -c7-\\'\\necho $MOREF\\nWhen I run this script from the ...\\n",
+      "answer": "\\n\\n",
+      "commands": [
+        "grep name | cut -c7-\\'\\necho $MOREF\\n"
+      ],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "grep",
+        "bash",
+        "sudo",
+        "cut",
+        "script"
+      ]
+    },
+    {
+      "id": 13,
+      "question": "\\nHow to check if a variable is set in Bash\\nHow do I know if a variable is set in Bash?\\nFor example, how do I check if the user gave the first parameter to a function?\\nfunction a {\\n# if $1 is set ?\\n}\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "bash"
+      ]
+    },
+    {
+      "id": 14,
+      "question": "\\nLoop through an array of strings in Bash?\\nI want to write a script that loops through 15 strings (array possibly?) Is that possible?\\nSomething like:\\nfor databaseName in listOfNames\\nthen\\n# Do something\\nend\\n",
+      "answer": "\\n\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_url": "https://stackoverflow.com/questions/tagged/bash?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:52:46.721458",
+      "tags": [
+        "script",
+        "bash"
+      ]
+    },
+    {
+      "id": 29,
+      "question": "\\nFind all files containing a specific text (string) on Linux?\\nHow do I find all files containing a specific string of text within their file contents?\\nThe following doesn\\'t work. It seems to display every single file in the system.\\nfind / -type f -exec grep -H \\'...\\n",
+      "answer": "\\nThe following commands will search for the string \"string_to_search\" in all files in the current directory and its subdirectories.\\n\\nUsing grep:\\n\\ngrep -r \"string_to_search\" .\\n\\n-r stands for recursive, meaning that the command will search in all subdirectories.\\n\".\" indicates the current directory.\\n\\nUsing find and grep:\\n\\nfind . -type f -exec grep \"string_to_search\" {} +\\n",
+      "commands": [
+        "grep \"string_to_search\" {} +\\n \\ngrep -r \"string_to_search\" .\\nfind . -type f -exec grep \"string_to_search\" {} +\\n",
+        "find and grep:\\n\\nfind . -type f -exec grep \"string_to_search\" {} +\\n \\ngrep -r \"string_to_search\" .\\nfind . -type f -exec grep \"string_to_search\" {} +\\n"
+      ],
+      "topic": "text_tools",
+      "category": "text_processing",
+      "source_url": "https://stackoverflow.com/questions/tagged/grep?sort=votes",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T10:53:17.413075",
+      "tags": [
+        "find",
+        "grep"
+      ]
+    }
+  ]
+}

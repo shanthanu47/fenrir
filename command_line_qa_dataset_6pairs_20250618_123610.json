@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "total_qa_pairs": 6,
+    "target_count": 180,
+    "generation_date": "2025-06-18T12:36:10.686307",
+    "topics_covered": [
+      "bash",
+      "file_ops",
+      "git",
+      "python_env",
+      "text_tools"
+    ],
+    "categories": [
+      "shell_scripting",
+      "file_operations",
+      "version_control",
+      "text_processing"
+    ],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate"
+    ],
+    "status": "partial"
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "question": "\\nIs there a (Unix) shell script to format JSON in human-readable form?\\n\\nBasically, I want it to transform the following:\\n\\n\\n{ \"foo\": \"lorem\", \"bar\": \"ipsum\" }\\n\\n\\n... into something like this:\\n\\n\\n{\\n \"foo\": \"lorem\",\\n \"bar\": \"ipsum\"\\n}\\n\\n",
+      "answer": "\\nWith Python 2.6+ or 3 you can use the [json.tool](https://docs.python.org/3/library/json.html#module-json.tool) module:\\n\\n\\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\n\\n\\nor, if the JSON is in a file, you can do:\\n\\n\\npython -m json.tool my_json.json\\n\\n\\nif the JSON is from an internet source such as an API, you can use\\n\\n\\ncurl http://my_url/ | python -m json.tool\\n\\n\\nFor convenience in all of these cases you can make an alias:\\n\\n\\nalias prettyjson=\\'python -m json.tool\\'\\n\\n\\n---\\n\\nFor even more convenience with a bit more typing to get it ready:\\n\\n\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\n\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\n\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n",
+      "commands": [
+        "curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n \\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\npython -m json.tool my_json.json\\ncurl http://my_url/ | python -m json.tool\\nalias prettyjson=\\'python -m json.tool\\'\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n",
+        "Python 2.6+ or 3 you can use the [json.tool](https://docs.python.org/3/library/json.html#module-json.tool) module:\\n\\n\\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\n\\n\\nor, if the JSON is in a file, you can do:\\n\\n\\npython -m json.tool my_json.json\\n\\n\\nif the JSON is from an internet source such as an API, you can use\\n\\n\\ncurl http://my_url/ | python -m json.tool\\n\\n\\nFor convenience in all of these cases you can make an alias:\\n\\n\\nalias prettyjson=\\'python -m json.tool\\'\\n\\n\\n---\\n\\nFor even more convenience with a bit more typing to get it ready:\\n\\n\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\n\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\n\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n\\n\\nfor all the above cases. You can put this in `.bashrc` and it will be available every time in shell. Invoke it like `prettyjson_s \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\'`.\\n\\nNote that as [@pnd](https://stackoverflow.com/users/5018816/pnd) pointed out in the [comments](https://stackoverflow.com/questions/352098/how-can-i-pretty-print-json-in-a-shell-script#comment58654798_1920585) below, in Python 3.5+ the JSON object is no longer sorted by default. To sort, add the [`--sort-keys`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-sort-keys) flag to the end. I.e. `... | python -m json.tool --sort-keys`.\\n\\nAnother useful option might be [`--no-ensure-ascii`](https://docs.python.org/3/library/json.html#cmdoption-json.tool-no-ensure-ascii) which disables escaping of non-ASCII characters (new in version 3.9).\\n \\necho \\'{\"foo\": \"lorem\", \"bar\": \"ipsum\"}\\' | python -m json.tool\\npython -m json.tool my_json.json\\ncurl http://my_url/ | python -m json.tool\\nalias prettyjson=\\'python -m json.tool\\'\\nprettyjson_s() {\\n echo \"$1\" | python -m json.tool\\n}\\nprettyjson_f() {\\n python -m json.tool \"$1\"\\n}\\nprettyjson_w() {\\n curl \"$1\" | python -m json.tool\\n}\\n"
+      ],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_query": "stackoverflow.com command line questions",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T12:22:22.905579",
+      "tags": [
+        "sort",
+        "shell",
+        "bash",
+        "python",
+        "curl"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "\\nI\\'m trying to compress a folder (`/var/www/`) to `~/www_backups/$time.tar` where `$time` is the current date.\\n\\nThis is what I have:\\n\\n\\ncd /var/www && sudo tar -czf ~/www_backups $time\"\\n\\n\\nI am completely lost and I\\'ve been at this for hours now. Not sure if `-czf` is correct. I simply want to copy all of the content in `/var/www` into a `$time.tar` file, and I want to maintain the file permissions for all of the files. Can anyone help me out?\\n",
+      "answer": "\\nTo `tar` and `gzip` a folder, the syntax is:\\n\\n\\ntar czf name_of_archive_file.tar.gz name_of_directory_to_tar\\n\\n\\nAdding `-` before the options (`czf`) is optional with `tar`. The effect of `czf` is as follows:\\n\\n* `c` — create an archive file (as opposed to extract, which is `x`)\\n* `f` — filename of the archive file\\n* `z` — filter archive through `gzip` (remove this option to create a `.tar` file)\\n\\nIf you want to `tar` the current directory, use `.` to designate that.\\n\\nTo construct filenames dynamically, use the `date` utility (look at its man page for the available format options). For example:\\n\\n\\ncd /var/www &&\\ntar czf ~/www_backups/$(date +%Y%m%d-%H%M%S).tar.gz .\\n\\n\\nThis will create a file named something like `20120902-185558.tar.gz`.\\n\\nOn Linux, chances are your `tar` also supports BZip2 compression with the `j` rather than `z` option. And possibly others. Check the man page on your local system.\\n",
+      "commands": [
+        "tar",
+        "gzip"
+      ],
+      "topic": "file_ops",
+      "category": "file_operations",
+      "source_query": "tar gzip command examples",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:24:42.871387",
+      "tags": [
+        "compress",
+        "extract",
+        "tar",
+        "zip",
+        "sed"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "I have a file (A.txt) with 4 columns of numbers and another file with 3 columns of numbers (B.txt). I need to solve the following problems:\\n\\n1. Find all lines in A.txt whose 3rd column has a number that appears any where in the 3rd column of B.txt.\\n2. Assume that I have many files like A.txt in a directory and I need to run this for every file in that directory.\\n\\nHow do I do this?",
+      "answer": "Here is an example. Create the following files and run\\n\\n\\nawk -f c.awk B.txt A*.txt \\n\\n\\n**c.awk**\\n\\n\\nFNR==NR {\\n s[$3]\\n next\\n}\\n\\n$3 in s {\\n print FILENAME, $0\\n}\\n\\n\\n**A1.txt**\\n\\n\\n1 2 3\\n1 2 6\\n1 2 5\\n\\n\\n**A2.txt**\\n\\n\\n1 2 3\\n1 2 6\\n1 2 5\\n\\n\\n**B.txt**\\n\\n\\n1 2 3\\n1 2 5\\n2 1 8\\n\\n\\nThe output should be:\\n\\n\\nA1.txt 1 2 3\\nA1.txt 1 2 5\\nA2.txt 1 2 3\\nA2.txt 1 2 5\\n",
+      "commands": [],
+      "topic": "text_tools",
+      "category": "text_processing",
+      "source_query": "grep sed awk command examples",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:25:22.803665",
+      "tags": [
+        "awk",
+        "find"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "\\nI\\'m trying to install **Django** and I\\'ve created a virtual environment for this project (I\\'m new in virtualenv). I\\'ve created the env this way: `virtualenv path` which seems to work properly since there is a new folder \"env\" in my project folder.\\n\\nNow I tried to install **Django** into this **virtualenv**.\\n\\n\\n\\\\PycharmProjects\\\\Django_tutorial>env/bin/pip install django\\n\\n\\n> \\'env\\' is not recognized as an internal or external command,\\n> operable program or batch file.\\n\\nSo I\\'ve checked the **env** folder and there are these folders: `Include`, `Lib`, `Scripts`\\n\\nIn the `Scripts` folder, there is a`pip.exe` so I\\'ve decided to try it that way:\\n\\n\\n\\\\PycharmProjects\\\\Django_tutorial>env/Scripts/pip install django\\n\\n\\nThe same thing occured:\\n\\n> \\'env\\' is not recognized as an internal or external command,\\n> operable program or batch file.\\n\\nDo you have any advices how to run this thing correctly?\\n\\nEDIT: Python 2.7.10 and Windows 8.1\\n",
+      "answer": "\\nWindows paths use backslashes, as shown in the prompt, not forwards ones.\\n\\n\\nenv\\\\Scripts\\\\pip install django\\n\\n\\nalthough I don\\'t know why you should need to use the full path at all; just `pip install django` should work once the venv is activated.\\n",
+      "commands": [
+        "pip install django"
+      ],
+      "topic": "python_env",
+      "category": "shell_scripting",
+      "source_query": "python venv pip commands",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T12:26:12.150060",
+      "tags": [
+        "python",
+        "virtualenv",
+        "venv",
+        "script",
+        "pip"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "\\nEvery time you create a new repository on GitHub, it shows you these command lines that I\\'ve always found useful...\\n\\necho \"# Project\" >> README.md\\ngit init\\ngit add README.md\\ngit commit -m \"first commit\"\\ngit branch -M master\\ngit remote add origin https://github.com/Username/Project.git\\ngit push -u origin master\\n\\nBut I have no idea what they really do... Can anyone help this poor Git newbie?\\n",
+      "answer": "\\necho \"# Project\" >> README.md\\n\\nThis creates a README in your current directory\\n\\ngit init\\n\\nThis will create a new .git directory to store commits and other objects.\\n\\ngit add README.md\\n\\nBefore adding a file to the repository, it must first be staged.\\n\\ngit commit -m \"initial commit\"\\n\\nThis would commit our staged changes into the repository.\\n\\ngit branch -M master\\n\\nWith a -m or -M option, oldbranch will be renamed to newbranch. If oldbranch had a corresponding reflog, it is renamed to match newbranch, and a reflog entry is created to remember the branch renaming. If newbranch exists, -M must be used to force the rename to happen\\n\\ngit remote add origin https://github.com/Username/Project.git\\n\\nThis would add a remote url to an existing git repository\\n\\ngit push -u origin master\\n\\nPush - moves/uploads the local changes (or snapshot) to the remote GitLab repository\\n",
+      "commands": [
+        "git repository\\n\\ngit push -u origin master\\n\\nPush - moves/uploads the local changes (or snapshot) to the remote GitLab repository\\n \\necho \"# Project\" >> README.md\\ngit init\\ngit add README.md\\ngit commit -m \"initial commit\"\\ngit branch -M master\\ngit remote add origin https://github.com/Username/Project.git\\ngit push -u origin master\\n"
+      ],
+      "topic": "git",
+      "category": "version_control",
+      "source_query": "github command line tutorials",
+      "difficulty": "intermediate",
+      "timestamp": "2025-06-18T12:29:57.890336",
+      "tags": [
+        "commit",
+        "command line",
+        "sed",
+        "git",
+        "repository"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "\\nWhat is a practical example of using the suspend command in Bash?\\n\\n`suspend` is a builtin command in Bash. When would you naturally use this command and find it useful?\\n",
+      "answer": "\\nLet's say you lack both GNU `screen` and `tmux` (and X11, *and* virtual consoles) but want to switch between a login shell and another interactive shell.\\n\\nYou would first login on the console, and then start a new shell, temporarily blocking the login shell. To get the login shell back to do some work there, you'd do `suspend`. Then you would `fg` to get the interactive shell back to continue with whatever it was you did there.\\n\\nIn fact, with job control, the login shell could spawn a number of interactive shells as background jobs that you could switch to with `fg %1`, `fg %2` etc., but to get back to the login shell, you would need to use `suspend` unless you wanted to manually `kill -s STOP $$`.\\n\\nAlso note that `Ctrl`+`Z` at the prompt in an interactive shell won't suspend it.\\n",
+      "commands": [],
+      "topic": "bash",
+      "category": "shell_scripting",
+      "source_query": "bash scripting examples",
+      "difficulty": "beginner",
+      "timestamp": "2025-06-18T12:31:35.548469",
+      "tags": [
+        "shell",
+        "tar",
+        "bash",
+        "find"
+      ]
+    }
+  ]
+}
